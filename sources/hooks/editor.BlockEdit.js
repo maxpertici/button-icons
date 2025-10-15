@@ -52,7 +52,7 @@ function addInspectorControls( BlockEdit ) {
 				<BlockEdit { ...props } />
 				<InspectorControls group="styles">
 					<PanelBody
-						title={ __( 'Icon', 'quantis-2024' ) }
+						title={ __( 'Icon', 'button-icons' ) }
 						className="button-icon-picker"
 						initialOpen={ true }
 					>
