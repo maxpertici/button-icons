@@ -23,14 +23,6 @@
       "options": {
         "activate": true
       }
-    },
-    {
-      "step": "runPHP",
-      "code": "<?php\n// Créer une page de démonstration avec des boutons\n$page_content = '\n<!-- wp:heading -->\n<h2 class=\"wp-block-heading\">Démonstration Button Icons</h2>\n<!-- /wp:heading -->\n\n<!-- wp:paragraph -->\n<p>Voici des exemples de boutons avec des icônes grâce au plugin Button Icons :</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:buttons -->\n<div class=\"wp-block-buttons\">\n<!-- wp:button -->\n<div class=\"wp-block-button\"><a class=\"wp-block-button__link wp-element-button\" href=\"#\">Bouton Exemple 1</a></div>\n<!-- /wp:button -->\n\n<!-- wp:button {\"backgroundColor\":\"vivid-red\"} -->\n<div class=\"wp-block-button\"><a class=\"wp-block-button__link wp-element-button has-vivid-red-background-color has-background\" href=\"#\">Bouton Exemple 2</a></div>\n<!-- /wp:button -->\n\n<!-- wp:button {\"backgroundColor\":\"vivid-green-cyan\"} -->\n<div class=\"wp-block-button\"><a class=\"wp-block-button__link wp-element-button has-vivid-green-cyan-background-color has-background\" href=\"#\">Bouton Exemple 3</a></div>\n<!-- /wp:button -->\n</div>\n<!-- /wp:buttons -->\n\n<!-- wp:paragraph -->\n<p>Sélectionnez un bouton dans l\\'éditeur pour voir les options d\\'icônes disponibles dans le panneau latéral.</p>\n<!-- /wp:paragraph -->\n\n<!-- wp:heading {\"level\":3} -->\n<h3 class=\"wp-block-heading\">Instructions :</h3>\n<!-- /wp:heading -->\n\n<!-- wp:list -->\n<ul class=\"wp-block-list\">\n<!-- wp:list-item -->\n<li>Cliquez sur un bouton pour le sélectionner</li>\n<!-- /wp:list-item -->\n\n<!-- wp:list-item -->\n<li>Regardez le panneau latéral pour les options d\\'icônes</li>\n<!-- /wp:list-item -->\n\n<!-- wp:list-item -->\n<li>Choisissez une icône et sa position</li>\n<!-- /wp:list-item -->\n\n<!-- wp:list-item -->\n<li>Prévisualisez le résultat</li>\n<!-- /wp:list-item -->\n</ul>\n<!-- /wp:list -->\n';\n\n// Créer la page\n$page_data = array(\n    \\'post_title\\'    => \\'Démonstration Button Icons\\',\n    \\'post_content\\'  => $page_content,\n    \\'post_status\\'   => \\'publish\\',\n    \\'post_type\\'     => \\'page\\',\n    \\'post_author\\'   => 1\n);\n\n$page_id = wp_insert_post($page_data);\n\nif ($page_id) {\n    echo \"Page de démonstration créée avec l\\'ID: \" . $page_id;\n    \n    // Mettre à jour l\\'option pour rediriger vers cette page\n    update_option(\\'button_icons_demo_page_id\\', $page_id);\n} else {\n    echo \"Erreur lors de la création de la page\";\n}\n?>"
-    },
-    {
-      "step": "runPHP",
-      "code": "<?php\n// Récupérer l'ID de la page de démonstration\n$demo_page_id = get_option('button_icons_demo_page_id');\nif ($demo_page_id) {\n    // Rediriger vers l'éditeur de la page de démonstration\n    $redirect_url = admin_url('post.php?post=' . $demo_page_id . '&action=edit');\n    echo \"Redirection vers: \" . $redirect_url;\n}\n?>"
     }
   ]
 }
