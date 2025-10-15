@@ -26,8 +26,8 @@ function addClasses( BlockListBlock ) {
 
 		const classes = classnames( props?.className, {
 			'has-icon': attributes?.icon,
-			[ `has-icon--${ attributes?.icon }` ]: attributes?.icon,
-			'has-icon-position--left': attributes?.iconPositionLeft,
+			[ `has-icon-${ attributes?.icon }` ]: attributes?.icon,
+			'has-icon-position-left': attributes?.iconPositionLeft,
 		} );
 
 		return <BlockListBlock { ...props } className={ classes } />;

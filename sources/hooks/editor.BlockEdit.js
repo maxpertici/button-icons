@@ -87,7 +87,7 @@ function addInspectorControls( BlockEdit ) {
 							<ToggleControl
 								label={ __(
 									'Show icon on left',
-									'quantis-2024'
+									'button-icons'
 								) }
 								checked={ iconPositionLeft }
 								onChange={ () => {

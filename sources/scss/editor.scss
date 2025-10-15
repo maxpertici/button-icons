@@ -37,14 +37,14 @@
         }
     }
 
-    &:not(.has-icon-position--left){
+    &:not(.has-icon-position-left){
         
         .wp-block-button__link::before {
             content: none;
         }
     }
 
-    &.has-icon-position--left {
+    &.has-icon-position-left {
 
         .wp-block-button__link {
             &::after {
@@ -67,7 +67,7 @@
 
         $dataSvg : 'data:image/svg+xml;utf8,' + $svg ;
 
-        &.has-icon--#{$slug} {
+        &.has-icon-#{$slug} {
 
             .wp-block-button__link {
 
