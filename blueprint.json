@@ -18,7 +18,7 @@
       "step": "installPlugin",
       "pluginData": {
         "resource": "url",
-        "url": "https://github.com/maxpertici/button-icons/archive/refs/heads/main.zip"
+        "url": "https://github.com/maxpertici/button-icons/archive/refs/heads/playground.zip"
       },
       "options": {
         "activate": true
