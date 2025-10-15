@@ -1,0 +1,28 @@
+@use "sass:map";
+/**
+ * Map deep get
+ * inspired form Kitty Giraudel https://css-tricks.com/snippets/sass/deep-getset-maps/
+ */
+
+@function map-deep-get( $map, $keys... ) {
+
+  $found : false ;
+
+  @each $key in $keys {
+
+	$found : false ;
+
+	@if( map.has-key( $map, $key ) ){
+
+	  $map   : map.get( $map, $key ) ;
+	  $found : true ;
+	}
+  }
+
+  @if ( false == $found ){
+	// @warn "$keys : #{ $keys }";
+	$map : '';
+  }
+
+  @return $map ;
+}

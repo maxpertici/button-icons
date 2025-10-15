@@ -1,0 +1,20 @@
+{
+  "name": "button-icons",
+  "version": "0.1.0",
+  "description": "",
+  "scripts": {
+    "make:icons": "cd sources/cli && node ./icons.js",
+    "watch": "wp-scripts start sources/editor.js sources/button-icons.js --output-path=dist --webpack-devtool=eval-source-map --mode=production --webpack-src-dir=sources --webpack-copy-php --config ./webpack.config.js",
+    "build": "npm run make:icons && wp-scripts build sources/editor.js sources/button-icons.js --output-path=dist --webpack-devtool=eval-source-map --mode=production --webpack-src-dir=sources --webpack-copy-php --stats=minimal --config ./webpack.config.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@wordpress/editor": "^14.32.0",
+    "@wordpress/primitives": "^4.32.0",
+    "@wordpress/scripts": "^26.19.0",
+    "classnames": "^2.5.1",
+    "consola": "^3.4.2"
+  }
+}

@@ -1,0 +1,115 @@
+
+@use "sass:map";
+@use './arrays.scss' as * ;
+@use "../icons/icons.build.scss" as *;
+
+
+// Add icons to Button blocks and style appropriately.
+.wp-block-button[class*=has-icon] {
+
+    .wp-block-button__link {
+
+        &::before,
+        &::after {
+            content: "";
+        }
+
+        // Styles the icon.
+        &::after, &::before {
+
+            display: inline-block;
+            background-color: currentColor;
+
+            -webkit-mask-size: contain;
+            mask-size: contain;
+            -webkit-mask-position:center;
+            mask-position:center;
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            height : 1em;
+            width  : 1em;
+
+            $defaultSvg : map-deep-get( $buttonIcons, 'arrow-right', 'svg' );
+            $dataSvg    : 'data:image/svg+xml;utf8,' + $defaultSvg ;
+
+            mask-image: url( #{$dataSvg} );
+            -webkit-mask-image: url( #{$dataSvg} );
+        }
+    }
+
+    &:not(.has-icon-position--left){
+        
+        .wp-block-button__link::before {
+            content: none;
+        }
+    }
+
+    &.has-icon-position--left {
+
+        .wp-block-button__link {
+            &::after {
+                content: none;
+            }
+
+            &::before {
+                content: "";
+            }
+        }
+    }
+
+
+
+    @each $slug, $iconSet in $buttonIcons {
+
+        $slug  : map.get( $iconSet, 'slug' ) ;
+        $label : map.get( $iconSet, 'label' ) ;
+        $svg   : map.get( $iconSet, 'svg' ) ;
+
+        $dataSvg : 'data:image/svg+xml;utf8,' + $svg ;
+
+        &.has-icon--#{$slug} {
+
+            .wp-block-button__link {
+
+                &::after, &::before {
+                    height : 1em;
+                    width  : 1em;
+                    mask-image: url( #{$dataSvg} );
+                    -webkit-mask-image: url( #{$dataSvg} );
+                }
+            }
+        }
+    }
+
+}
+
+
+
+
+// - - - - - - - - - - - - - - - - - - - - - -
+// Style "Icon Settings" panel.
+
+.button-icon-picker {
+
+    .components-panel__row {
+        &:not(:nth-child(2)) {
+            margin-top: 16px;
+        }
+    }
+
+    &__button span {
+        width: 100%;
+    }
+    
+    &__button svg{
+        max-width: 64%;
+        margin: auto;
+    }
+
+    .button-icon-picker__grid {
+        border: 1px solid rgb(148, 148, 148);
+        border-radius: 2px;
+        padding: 2px;
+        width: 100%;
+    }
+}

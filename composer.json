@@ -1,0 +1,10 @@
+{
+    "name": "mxp/button-icons",
+    "require-dev": {},
+    "autoload": {
+      "files": [],
+      "psr-4": {
+        "MXP\\ButtonIcons\\": "app/"
+      }
+    }
+  }
