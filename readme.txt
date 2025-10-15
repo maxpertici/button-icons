@@ -17,8 +17,6 @@ Add button icons to Gutenberg buttons.
 
 == Installation ==
 1. Install the plugin and activate.
-2. 
-3. 
 
 == Changelog ==
 
