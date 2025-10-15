@@ -4,8 +4,6 @@ namespace MXP\ButtonIcons\Core;
 
 final class App extends Plugin {
 
-	private array $features = [];
-
 	/**
 	 * Load the plugin
 	 *
@@ -24,7 +22,6 @@ final class App extends Plugin {
 		add_action('init', [ $this, 'loadTranslations' ]);
 		add_action('init', [ $this, 'buttonIconsStyles' ]);
 		add_action( 'enqueue_block_editor_assets', [ $this, 'editorEnqueues' ] );
-		// add_action( 'wp_enqueue_scripts', [ $this, 'frontEnqueues' ] );
 		add_action( 'render_block_core/button', [ $this, 'customizeButtonBlock' ], 10, 2 );
 	}
 
@@ -75,16 +72,11 @@ final class App extends Plugin {
 		);
 	}
 
-
 	/**
-	 * Frontend Enqueues
+	 * Add Button Icons Block Styles (frontend & backend)
 	 *
 	 * @return void
 	 */
-	// public function frontEnqueues(){
-	// 	$plugin_path = untrailingslashit( $this->directoryPath );
-	// }
-
 	public function buttonIconsStyles(){
 
 		$plugin_path = untrailingslashit( $this->directoryPath );
@@ -102,6 +94,13 @@ final class App extends Plugin {
 	}
 
 
+	/**
+	 * Customize the render of block button
+	 *
+	 * @param string $block_content
+	 * @param array $block
+	 * @return void
+	 */
 	public function customizeButtonBlock( $block_content, $block ) {
 
 		if ( ! isset( $block['attrs']['icon'] ) ) {
@@ -117,7 +116,6 @@ final class App extends Plugin {
 			return $block_content;
 		}
 		
-		
 		// Make sure the selected icon is in the array, otherwise define default icon.
 		$icons = (array) include $iconsFile ;
 		if ( ! array_key_exists( $icon, $icons ) ) {
@@ -128,7 +126,7 @@ final class App extends Plugin {
 		$p = new \WP_HTML_Tag_Processor( $block_content );
 		if ( $p->next_tag() ) {
 			$p->add_class( 'has-icon' );
-			$p->add_class( 'has-icon--' . $icon );
+			$p->add_class( 'has-icon-' . $icon );
 			if( $positionLeft ){
 				$p->add_class( 'has-icon-position-left' );
 			} else {
