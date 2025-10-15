@@ -4,7 +4,7 @@ Add button icons to Gutenberg buttons.
 
 ## 🚀 Try the plugin online
 
-[![Test in WordPress Playground](https://img.shields.io/badge/Test%20in-WordPress%20Playground-blue?style=for-the-badge&logo=wordpress)](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/maxpertici/button-icons/main/blueprint.json)
+[![Test in WordPress Playground](https://img.shields.io/badge/Test%20in-WordPress%20Playground-blue?style=for-the-badge&logo=wordpress)](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/maxpertici/button-icons/playground/blueprint.json)
 
 Click the button above to test the plugin directly in your browser with WordPress Playground. The plugin will be automatically installed and activated, and you'll be redirected to a demo page.
 
@@ -22,37 +22,3 @@ Click the button above to test the plugin directly in your browser with WordPres
 3. You should see new options to add icons
 4. Select an icon and its position
 5. Preview or publish to see the result
-
-## 🛠 Local installation
-
-To install the plugin on your WordPress site:
-
-1. Download the code from GitHub
-2. Upload the folder to `/wp-content/plugins/`
-3. Activate the plugin in WordPress admin
-
-## 🔧 Development
-
-This plugin uses:
-- PHP 8.1+
-- WordPress 6.8+
-- Webpack for asset compilation
-- Composer for PHP class autoloading
-
-### Development commands:
-
-```bash
-# Install dependencies
-npm install
-composer install
-
-# Compile assets
-npm run build
-
-# Development mode with watch
-npm run dev
-```
-
-## 📄 License
-
-GPLv2 - see [LICENSE](LICENSE) for more details.

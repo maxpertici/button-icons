@@ -15,7 +15,7 @@ Add button icons to Gutenberg buttons.
 
 Add button icons to Gutenberg buttons.
 
-🚀 **Try it online**: [Test in WordPress Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/maxpertici/button-icons/main/blueprint.json)
+🚀 **Try it online**: [Test in WordPress Playground](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/maxpertici/button-icons/playground/blueprint.json)
 
 This plugin extends Gutenberg button blocks by adding the ability to insert icons. Simply select a button in the editor and use the new options in the sidebar panel to add an icon before or after the button text.
 
