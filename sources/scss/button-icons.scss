@@ -1,24 +1,27 @@
-.wp-block-button[class*=has-icon] {
+.wp-block-button[class*="has-icon"] {
 
-  .wp-block-button__link {
-	display: flex;
-	gap: 0.35em;
-	align-items: center;
-	span {
-	  line-height: 0;
-	}
-	svg {
-	  color: currentColor;
-	}
-  }
+	.wp-block-button__link {
+		display: flex;
+		gap: 0.35em;
+		align-items: center;
 
-  .wp-block-button__link-icon {
-	position: relative;
-	svg {
-		height: 1em;
-		width: 1em;
-		scale: 1;
+		span {
+			line-height: 0;
+		}
+
+		svg {
+			color: currentcolor;
+		}
 	}
-  }
+
+	.wp-block-button__link-icon {
+		position: relative;
+
+		svg {
+			height: 1em;
+			width: 1em;
+			scale: 1;
+		}
+	}
 
 }

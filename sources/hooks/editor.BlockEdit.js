@@ -12,8 +12,6 @@ import {
 	__experimentalGrid as Grid, // eslint-disable-line
 } from '@wordpress/components';
 
-
-
 /**
  * All available icons.
  * (Order determines presentation order)
@@ -21,16 +19,13 @@ import {
 
 import { icons as iconsLibrary } from '../icons/icons.build.js';
 
-const ICONS = Object.entries(iconsLibrary).map(([key, value]) => {
+const ICONS = Object.values( iconsLibrary ).map( ( value ) => {
 	return {
 		label: value.label,
 		value: value.slug,
-		icon: <span dangerouslySetInnerHTML={{ __html: value.svg }} />
-	}
-});
-
-
-
+		icon: <span dangerouslySetInnerHTML={ { __html: value.svg } } />,
+	};
+} );
 
 /**
  * Filter the BlockEdit object and add icon inspector controls to button blocks.
@@ -109,4 +104,3 @@ addFilter(
 	'button-icons/add-inspector-controls',
 	addInspectorControls
 );
-

@@ -1,14 +1,12 @@
 /**
  * WordPress dependencies
  */
-import { __ } from '@wordpress/i18n';
 import { addFilter } from '@wordpress/hooks';
 
 /**
  * External dependencies
  */
 import classnames from 'classnames';
-
 
 /**
  * Add icon and position classes in the Editor.
@@ -34,8 +32,4 @@ function addClasses( BlockListBlock ) {
 	};
 }
 
-addFilter(
-	'editor.BlockListBlock',
-	'button-icons/add-classes',
-	addClasses
-);
+addFilter( 'editor.BlockListBlock', 'button-icons/add-classes', addClasses );

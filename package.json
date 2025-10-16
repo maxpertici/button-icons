@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "description": "",
   "scripts": {
+    "lint:css": "wp-scripts lint-style ./sources/scss",
+    "lint:css:fix": "wp-scripts lint-style ./sources/scss --fix",
+    "lint:js": "wp-scripts lint-js ./sources/hooks",
+    "lint:js:fix": "wp-scripts lint-js ./sources/hooks --fix",
     "make:icons": "cd sources/cli && node ./icons.js",
     "watch": "wp-scripts start sources/editor.js sources/button-icons.js --output-path=dist --webpack-devtool=eval-source-map --mode=production --webpack-src-dir=sources --webpack-copy-php --config ./webpack.config.js",
     "build": "npm run make:icons && wp-scripts build sources/editor.js sources/button-icons.js --output-path=dist --webpack-devtool=eval-source-map --mode=production --webpack-src-dir=sources --webpack-copy-php --stats=minimal --config ./webpack.config.js"
