@@ -1,3 +1,1 @@
-<svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M2.875 5.25L12 5.25L12 6.75L2.875 6.75L7.0625 10.9375L6 12L5.24537e-07 6L6 -5.24537e-07L7.0625 1.0625L2.875 5.25Z" fill="currentColor"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-left"><line x1="19" y1="12" x2="5" y2="12"></line><polyline points="12 19 5 12 12 5"></polyline></svg>

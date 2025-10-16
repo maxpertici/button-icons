@@ -2,14 +2,13 @@
 
   .wp-block-button__link {
 	display: flex;
-	gap: 0.5em;
+	gap: 0.35em;
 	align-items: center;
 	span {
 	  line-height: 0;
 	}
 	svg {
 	  color: currentColor;
-	  fill: currentColor;
 	}
   }
 

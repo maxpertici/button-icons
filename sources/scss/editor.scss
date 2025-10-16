@@ -100,10 +100,12 @@
     &__button span {
         width: 100%;
     }
-    
+
     &__button svg{
         max-width: 64%;
         margin: auto;
+        fill : none;
+        color: currentColor;
     }
 
     .button-icon-picker__grid {
