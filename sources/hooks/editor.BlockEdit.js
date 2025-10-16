@@ -21,7 +21,7 @@ import {
 
 import { icons as iconsLibrary } from '../icons/icons.build.js';
 
-export const ICONS = Object.entries(iconsLibrary).map(([key, value]) => {
+const ICONS = Object.entries(iconsLibrary).map(([key, value]) => {
 	return {
 		label: value.label,
 		value: value.slug,
