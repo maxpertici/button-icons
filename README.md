@@ -22,3 +22,7 @@ This plugin provides a streamlined way to create and manage custom icon librarie
 2. Follow the same naming and structure conventions as the existing icon files
 3. Run the build process to compile and optimize your icons
 4. Your custom icons will be automatically available in the Gutenberg button block interface
+
+### Demo
+https://github.com/user-attachments/assets/ec5a2fd8-17f3-4379-adc1-45b0308b17b8
+
