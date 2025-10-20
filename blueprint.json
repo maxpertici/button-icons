@@ -1,0 +1,30 @@
+{
+    "landingPage": "/wp-admin/post.php?post=2&action=edit",
+    "preferredVersions": {
+      "php": "8.0",
+      "wp": "latest"
+    },
+    "phpExtensionBundles": [
+      "kitchen-sink"
+    ],
+    "features": {
+      "networking": true
+    },
+    "steps": [
+      {
+        "step": "installPlugin",
+        "pluginZipFile": {
+          "resource": "url",
+          "url": "https://www.dropbox.com/scl/fi/2kf00g8fnlf4d3m02rwi8/button-icons.zip?rlkey=303vomwiuq4ssqlybbgz82xqq&dl=1"
+        },
+        "options": {
+          "activate": true
+        }
+      },
+      {
+        "step": "login",
+        "username": "admin",
+        "password": "password"
+      }
+    ]
+  }

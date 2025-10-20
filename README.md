@@ -1,11 +1,15 @@
 # Button Icons
 
+[![Test with WordPress Playground](https://img.shields.io/badge/Test%20with-WordPress%20Playground-0073aa?style=for-the-badge&logo=wordpress&logoColor=white)](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/maxpertici/button-icons/main/blueprint.json)
+
 ## Introduction
 A WordPress plugin that adds icon functionality to Gutenberg button blocks.
 
 Perfect for enhancing call-to-action buttons, navigation elements, and improving the visual appeal of your WordPress site.
 
+
 https://github.com/user-attachments/assets/ec5a2fd8-17f3-4379-adc1-45b0308b17b8
+
 
 ## Overview
 This plugin provides a streamlined way to create and manage custom icon libraries for WordPress contributors and content creators.
