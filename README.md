@@ -1,6 +1,6 @@
 # Button Icons
 
-[![Test with WordPress Playground](https://img.shields.io/badge/Test%20with-WordPress%20Playground-0073aa?style=for-the-badge&logo=wordpress&logoColor=white)](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/maxpertici/button-icons/main/blueprint.json)
+[![Test with WordPress Playground](https://img.shields.io/badge/Test%20with-WordPress%20Playground-0073aa?style=for-the-badge&logo=wordpress&logoColor=white)](https://playground.wordpress.net/?blueprint-url=https://raw.githubusercontent.com/maxpertici/button-icons/refs/heads/main/blueprint.json)
 
 ## Introduction
 A WordPress plugin that adds icon functionality to Gutenberg button blocks.
