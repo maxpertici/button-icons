@@ -8,6 +8,7 @@
     "lint:js": "wp-scripts lint-js ./sources/hooks",
     "lint:js:fix": "wp-scripts lint-js ./sources/hooks --fix",
     "make:icons": "cd sources/cli && node ./icons.js",
+    "make:zip": "wp-scripts plugin-zip",
     "watch": "wp-scripts start sources/editor.js sources/button-icons.js --output-path=dist --webpack-devtool=eval-source-map --mode=production --webpack-src-dir=sources --webpack-copy-php --config ./webpack.config.js",
     "build": "npm run make:icons && wp-scripts build sources/editor.js sources/button-icons.js --output-path=dist --webpack-devtool=eval-source-map --mode=production --webpack-src-dir=sources --webpack-copy-php --stats=minimal --config ./webpack.config.js"
   },
@@ -20,5 +21,20 @@
     "@wordpress/scripts": "^26.19.0",
     "classnames": "^2.5.1",
     "consola": "^3.4.2"
-  }
+  },
+  "files": [
+    "dist",
+    "app",
+    "vendor",
+    "languages",
+    "package.json",
+    "package-lock.json",
+    "composer.json",
+    "composer.lock",
+    "webpack.config.js",
+    "blueprint.json",
+    "button-icons.php",
+    "readme.txt",
+    "README.md"
+  ]
 }
